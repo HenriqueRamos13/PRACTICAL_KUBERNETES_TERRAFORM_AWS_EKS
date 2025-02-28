@@ -50,3 +50,15 @@ variable "ami_type" {
   # Se for ARM, use AL2023_ARM_64_STANDARD; se x86, AL2023_x86_64_STANDARD.
   default = "AL2023_ARM_64_STANDARD"
 }
+
+variable "account_id" {
+  description = "ID da conta AWS"
+  type        = string
+}
+
+variable "aws_region" {
+  description = "Região da AWS"
+  type        = string
+  default     = "us-east-1"
+}
+

@@ -14,7 +14,7 @@ const users: User[] = [];
 
 export async function routes(app: FastifyTypedInstance) {
     app.get('/users', {
-        preHandler: [app.authenticate],
+        // preHandler: [app.authenticate],
         schema: {
             tags: ['users'],
             description: 'Get all users',

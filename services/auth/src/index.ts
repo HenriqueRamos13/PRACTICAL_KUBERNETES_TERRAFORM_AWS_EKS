@@ -17,15 +17,15 @@ app.register(fastifyCors, {
 
 app.register(fastifyCookie);
 
-app.decorate('authenticate', async (request: FastifyRequest, reply: FastifyReply, done: any) => {
-    done()
-    const token = request.cookies.token; // supondo que o cookie se chame 'token'
-    return
-    if (!token) {
-        return reply.code(401).send({ message: 'Acesso não autorizado' });
-    }
-    // Aqui você pode adicionar lógica para validar o token, ex: verificar assinatura, expiração, etc.
-});
+// app.decorate('authenticate', async (request: FastifyRequest, reply: FastifyReply, done: ) => {
+//     return done()
+//     const token = request.cookies.token; // supondo que o cookie se chame 'token'
+//     return
+//     if (!token) {
+//         return reply.code(401).send({ message: 'Acesso não autorizado' });
+//     }
+//     // Aqui você pode adicionar lógica para validar o token, ex: verificar assinatura, expiração, etc.
+// });
 
 
 app.register(fastifySwagger, {

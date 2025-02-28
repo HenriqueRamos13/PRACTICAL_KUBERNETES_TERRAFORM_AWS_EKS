@@ -29,7 +29,3 @@ cache
 *.csr
 *.csr.pem
 
-
-docker-build.sh
-concurrency.sh
-

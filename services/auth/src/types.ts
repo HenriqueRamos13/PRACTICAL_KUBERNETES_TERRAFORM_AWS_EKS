@@ -7,6 +7,4 @@ export type FastifyTypedInstance = FastifyInstance<
     RawReplyDefaultExpression,
     FastifyBaseLogger,
     ZodTypeProvider
-> & {
-    authenticate: preHandlerHookHandler;
-}
+>

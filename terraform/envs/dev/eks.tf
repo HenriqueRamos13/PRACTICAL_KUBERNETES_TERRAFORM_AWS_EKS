@@ -11,4 +11,18 @@ module "eks" {
   max_capacity     = 2
   instance_types   = ["t4g.large"]
   ami_type         = "AL2023_ARM_64_STANDARD"
+
+  account_id = var.aws_account_id
+
+  aws_region = var.aws_region
+}
+
+output "auth_app_service_lb_url" {
+  description = "Hostname do Load Balancer do serviço auth-app-service"
+  value       = module.eks.auth_app_service_lb_url
+}
+
+output "ecr_repository_url" {
+  description = "URL do repositório ECR"
+  value       = module.eks.ecr_repository_url
 }
